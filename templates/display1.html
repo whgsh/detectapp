@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chartjs-adapter-date-fns.bundle.min.js') }}"></script>
+    
+    </head>
+    <body>
+        <div class="container my-4">
+            <!-- Video Output Section -->
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <!-- Original Video Stream -->
+                    <div class="video-output">
+                        <img src="{{ url_for('original_video_feed') }}" alt="Original Video Stream" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <!-- Processed Video Stream -->
+                    <div class="video-output">
+                        <img src="{{ url_for('video_feed') }}" alt="Processed Video Stream" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <!-- Amplitude Chart -->
+                    <div class="chart-container">
+                        <canvas id="amplitudeChart"></canvas>
+                        <div id="amplitudeData">振幅数据: <span id="amplitudeValue">0</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Frequency Chart -->
+                    <div class="chart-container">
+                        <canvas id="frequencyChart"></canvas>
+                        <div id="frequencyData">频率数据: <span id="frequencyValue">0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="{{ url_for('static', filename='js/realtime-charts.js') }}"></script>
+        <!-- Bootstrap JS and its dependencies -->
+        <script src="{{ url_for('static', filename='js/jquery-3.5.1.slim.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        </body>
+        </html>
+
+
+

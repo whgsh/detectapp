@@ -1,0 +1,235 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif; /*
+  更现代的字体
+*/
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333; /*
+  默认字体颜色
+*/
+}
+  .container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px; /*
+  增加内边距
+*/
+  border-radius: 10px; /*
+  更圆润的边角
+*/
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /*
+  更深的阴影效果
+*/
+  max-width: 600px; /*
+  限制最大宽度
+*/
+  margin: auto; /*
+  水平居中
+*/
+}
+  h1 {
+  color: #333;
+  margin-bottom: 20px; /*
+  增加标题下的间距
+*/
+}
+  p {
+  font-size: 16px; /*
+  调整字体大小
+*/
+  color: #555;
+  line-height: 1.6; /*
+  增加行高
+*/
+}
+  .btn {
+  display: inline-block;
+  padding: 12px 25px; /*
+  调整按钮大小
+*/
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease; /*
+  平滑过渡所有变化
+*/
+  border: none; /*
+  移除边框
+*/
+  font-weight: bold; /*
+  加粗字体
+*/
+}
+  .btn: hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /*
+  悬停时添加阴影
+*/
+  transform: translateY(-2px); /*
+  轻微上移
+*/
+}
+  /*
+  响应式设计
+*/
+@media (max-width: 768px) {
+  .content, .charts-data {
+  flex-direction: column;
+  }
+  .chart-container {
+  flex-basis: 100%; /*
+  在小屏幕上占满整个宽度
+*/
+  margin-bottom: 20px; /*
+  增加底部间距
+*/
+  }
+}
+  input[type="text"], input[type="number"], input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+  input[type="submit"] {
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+  input[type="submit"]: hover {
+  background-color: #4cae4c;
+}
+  #video-stream {
+  margin-top: 20px;
+}
+  #data-display {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  #data-display p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+  .nav-container {
+  display: flex;
+  align-items: center;
+  position: absolute; /*
+  绝对定位
+*/
+  top: 0; /*
+  顶部对齐
+*/
+  left: 0; /*
+  左侧对齐
+*/
+  padding: 10px;
+}
+  .logo {
+  height: 50px; /*
+  根据你的logo图片大小调整
+*/
+}
+  .nav-links {
+  display: flex;
+  margin-left: 20px; /*
+  或者根据需要调整
+*/
+}
+  .nav-links .btn {
+  margin-left: 10px;
+}
+  /*
+  确保其他元素不会与导航栏重叠
+*/
+body {
+  padding-top: 70px; /*
+  根据导航栏的高度调整
+*/
+}
+  .video-output img {
+  max-width: 1280px; /*
+  最大宽度为1280px
+*/
+  max-height: 720px; /*
+  最大高度为720px
+*/
+  width: auto; /*
+  宽度自动
+*/
+  height: auto; /*
+  高度自动
+*/
+  display: block; /*
+  块级元素
+*/
+  margin: auto; /*
+  自动外边距实现水平居中
+*/
+  object-fit: contain; /*
+  保持宽高比
+*/
+} 
+  .content {
+  display: flex; /*
+  使用Flex布局
+*/
+  justify-content: center; /*
+  水平居中
+*/
+  align-items: center; /*
+  垂直居中
+*/
+  height: 100vh; /*
+  高度占满视口高度
+*/
+}
+  .video-output {
+  width: 100%; /*
+  宽度设置为100%，以便于在父容器中水平居中
+*/
+  display: flex;
+  justify-content: center; /*
+  水平居中
+*/
+  margin-bottom: 20px; /*
+  在视频和图表之间添加一些间距
+*/
+}
+  .video-output img {
+  max-width: 100%; /*
+  图像最大宽度为容器宽度
+*/
+  max-height: 720px; /*
+  图像最大高度限制为720px
+*/
+  height: auto; /*
+  高度自动
+*/
+  object-fit: contain; /*
+  保持宽高比
+*/
+}
+  .charts-data {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+  .chart-container {
+  flex-basis: 45%; /*
+  每个图表占用约45%的空间
+*/
+  padding: 10px;
+}
